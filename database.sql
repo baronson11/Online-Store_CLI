@@ -6,10 +6,10 @@ USE b_amazon;
 CREATE TABLE products (
 	item_id INT NOT NULL AUTO_INCREMENT,
 	product_name varchar(30) not null,
-    department_name varchar(30) not null,
-    price DECIMAL(10,2) not null,
-    stock_quantity INT not null,
-    PRIMARY KEY (item_id)
+  department_name varchar(30) not null,
+  price DECIMAL(10,2) not null,
+  stock_quantity INT not null,
+  PRIMARY KEY (item_id)
 );
 
 INSERT INTO b_amazon.products (product_name, department_name, price, stock_quantity)

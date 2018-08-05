@@ -60,7 +60,6 @@ function welcomeCustomer() {
 }
 
 function purchaseProduct() {
-  // We'll have to use inquirer to prompt the user for the artist they want to find
 inquirer
   .prompt([{
     name: "item",
@@ -72,9 +71,7 @@ inquirer
     message: "Enter the number of units:"
   }])
   .then(function(answer) {
-    // When we get the answer back, we can query the database for the result
     console.log(`Checking database for items....`);
-    // Query Here
     let results = connection.query(
       "SELECT * FROM products WHERE ?",
       {
